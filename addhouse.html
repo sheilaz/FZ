@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>菲众海外投资</title>
 
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
     <link href="css/jquery.fancyspinbox.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
+<body bgcolor="#f0f0f0">
     <div class="container">
-        <p1>所属楼盘</p1>
+        <p1>所属楼盘：</p1>
         <select id="my-menu01">
             <option value="building01" selected>楼盘1</option>
             <option value="building02">楼盘2</option>
@@ -27,14 +30,15 @@
         </script>
     </div>
 
+    <h5></h5>
     <div class="container">
-        <p1>所属楼盘</p1>
+        <p1>户型：</p1>
         <select id="my-menu02">
-            <option value="building01" selected>楼盘1</option>
-            <option value="building02">楼盘2</option>
-            <option value="building03">楼盘3</option>
-            <option value="building04">楼盘4</option>
-            <option value="building05">楼盘5</option>
+            <option value="room01" selected>户型1</option>
+            <option value="room02">户型2</option>
+            <option value="room03">户型3</option>
+            <option value="room04">户型4</option>
+            <option value="room05">户型5</option>
         </select>
         <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/jquery.fancyspinbox.js"></script>
@@ -43,9 +47,68 @@
         </script>
     </div>
 
+    <h5></h5>
+    <div class="container">
+        <p1>阳台：</p1>
+        <select id="my-menu03">
+            <option value="balcony01" selected>全封闭</option>
+            <option value="balcony02">非封闭</option>
+            <option value="balcony03">复合型</option>
+            <option value="balcony04">无阳台</option>
+        </select>
+        <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/jquery.fancyspinbox.js"></script>
+        <script>
+            $('#my-menu03').fancyspinbox();
+        </script>
+    </div>
 
+    <h5></h5>
+    <div class="container">
+        <p1>朝向：</p1>
+        <select id="my-menu04">
+            <option value="direction01" selected>东西向</option>
+            <option value="direction02">南北向</option>
+        </select>
+        <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/jquery.fancyspinbox.js"></script>
+        <script>
+            $('#my-menu04').fancyspinbox();
+        </script>
+    </div>
 
+    <h5></h5>
+    <div class="container">
+        <p1>交易方式：</p1>
+        <select id="my-menu05">
+            <option value="direction01" selected>网上银行</option>
+            <option value="direction02">支付宝</option>
+        </select>
+        <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/jquery.fancyspinbox.js"></script>
+        <script>
+            $('#my-menu05').fancyspinbox();
+        </script>
+    </div>
 
+    <h5></h5>
+    <p1>价格：</p1>
+    <input type="text" name="price" size="12" style="border-radius: 3px; border-color: #16425B" placeholder="请输入价格"/>&nbsp;比索
+
+    <h5></h5>
+    <p1>面积：</p1>
+    <input type="text" name="area" size="12" style="border-radius: 3px; border-color: #16425B"  placeholder="请输入面积"/>&nbsp;平米
+
+    <h5></h5>
+    <p1>地点：</p1>
+    <input type="text" name="place01" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入楼号"/>&nbsp;楼，
+    <input type="text" name="place02" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入层号"/>&nbsp;层，
+    <input type="text" name="place03" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入房号"/>&nbsp;号
+
+    <div class="box bg-1" style="margin-top: 30px">
+        <button class="button button--antiman button--round-l button--text-medium"><i class="button__icon icon icon-plus"></i><span>Submit</span></button>
+        <button class="button button--antiman button--round-l button--text-medium" onclick="window.location.href='index.html'"><i class="button__icon icon icon-plus"></i><span>Back</span></button>
+    </div>
 </body>
 </html>
 

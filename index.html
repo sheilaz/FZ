@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菲众海外投资</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <link rel="stylesheet" href="css/navigationbar.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/zzsc-demo.css">
+    <style>
+        html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+        ul, ol { padding: 0;}
+
+        .banner { position: relative; overflow: auto; text-align: center;}
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+    </style>
+    <style type="text/css">
+        .demo{
+            padding: 2em 0;
+        }
+        .box{
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .box:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,63,91,0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover:after{
+            opacity: 1;
+        }
+        .box img{
+            width: 100%;
+            height: auto;
+        }
+        .box .box-content{
+            width: 100%;
+            background: #255773;
+            padding: 10px 0;
+            color: #d5f7ff;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            z-index: 1;
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover .box-content{
+            bottom: 0;
+        }
+        .box .title{
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+        .box .post{
+            display: block;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .box .social{
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .box .social li{
+            display: inline-block;
+            margin-right: 7px;
+            position: relative;
+            transform: translateY(-100px);
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover .social li:first-child{
+            transition-delay: 0.5s;
+        }
+        .box:hover .social li:last-child{
+            transition-delay: 0.8s;
+        }
+        .box .social li:before{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background: #f1e7c3;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .box:hover .social li{
+            transform: translateY(0);
+        }
+        .box .social li a{
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #f1e7c3;
+            font-size: 20px;
+            font-weight: 700;
+            color: #003f5b;
+            margin-top: 50px;
+            opacity: 1;
+            transition: all 0.3s ease 0s;
+        }
+        .box:hover .social li a{
+            opacity: 1;
+        }
+        .box .social li a:hover{
+            background: #ff9420;
+            color: #fff;
+        }
+        @media only screen and (max-width:990px){
+            .box{ margin-bottom: 30px; }
+        }
+    </style>
+    <style>
+        #b06 { width: 640px;}
+        #b06 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+        #b06 .dots li
+        {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+        #b06 .dots li.active
+        {
+            background: #fff;
+            opacity: 1;
+        }
+        #b06 .arrow { position: absolute; top: 200px;}
+        #b06 #al { left: 15px;}
+        #b06 #ar { right: 15px;}
+    </style>
+
+    <script>
+        function imgReload()
+        {
+            var imgHeight = 0;
+            var wtmp = $("body").width();
+            $("#b06 ul li").each(function(){
+                $(this).css({width:wtmp + "px"});
+            });
+            $(".sliderimg").each(function(){
+                $(this).css({width:wtmp + "px"});
+                imgHeight = $(this).height();
+            });
+        }
+
+        $(window).resize(function(){imgReload();});
+
+        $(document).ready(function(e) {
+            imgReload();
+            var unslider06 = $('#b06').unslider({
+                    dots: true,
+                    fluid: true
+                }),
+                data06 = unslider06.data('unslider');
+
+            $('.unslider-arrow06').click(function() {
+                var fn = this.className.split(' ')[1];
+                data06[fn]();
+            });
+        });
+    </script>
+</head>
+<body>
+    <table style="width: 100%; background-color: #696969">
+        <ul>
+            <li><a href="sell.html">售房</a></li>
+            <li><a href="rent.html">租房</a></li>
+            <li><a href="buildings.html">楼盘介绍</a></li>
+            <li><a href="">关于菲众</a></li>
+            <li><a href="contactUs">联系我们</a></li>
+            <li><a href="login.html">注册/登录</a></li>
+            <li><a href="addhouse.html">添加房源</a></li>
+        </ul>
+    </table>
+
+    <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="img/最新房源.jpg">
+                        <div class="box-content">
+                            <h3 class="title">最新房源</h3>
+                        </div>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="img/特价现房.jpg">
+                        <div class="box-content">
+                            <h3 class="title">特价现房</h3>
+                        </div>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="box">
+                        <img src="img/热门房产.jpg">
+                        <div class="box-content">
+                            <h3 class="title">热门房产</h3>
+                        </div>
+                        <ul class="social">
+                            <li><a href="#"><i class="fa fa-search"></i></a></li>
+                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div width="1000px">
+                <div class="box" style="margin-top:30px">
+                    <img src="img/特惠出租.jpg">
+                    <div class="box-content">
+                        <h3 class="title">特惠出租</h3>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <h2>&nbsp&nbsp&nbsp&nbsp合作单位展示</h2>
+
+    <div class="banner" id="b06">
+        <ul>
+            <li><img class="sliderimg" src="img/01.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/02.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/03.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/04.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/05.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+        </ul>
+        <a href="javascript:void(0);" class="unslider-arrow06 prev"><img class="arrow" id="al" src="img/arrowl.png" alt="prev" width="20" height="35"></a>
+        <a href="javascript:void(0);" class="unslider-arrow06 next"><img class="arrow" id="ar" src="img/arrowr.png" alt="next" width="20" height="37"></a>
+    </div>
+
+    <table bgcolor="#8A8A8A" width="100%" align="center">
+                <tr height="40">
+                    <td></td>
+                    <td>更多属性</td>
+                    <td>投资与签证</td>
+                    <td>热门城市</td>
+                    <td>热门楼盘</td>
+                    <td></td>
+                </tr>
+                <tr height="1">
+                    <td></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>菲律宾房产</div></td>
+                    <td><div>贷款办理</div></td>
+                    <td><div>Pasay区域</div></td>
+                    <td><div>Shore</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>豪华物业</div></td>
+                    <td><div>物业投资</div></td>
+                    <td><div>Makati区域</div></td>
+                    <td><div>Sea</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>预售公寓</div></td>
+                    <td><div>物业指南和价格</div></td>
+                    <td><div>Alabang区域</div></td>
+                    <td><div>xxx</div></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td></td>
+                    <td><div>购房投资移民</div></td>
+                    <td><div>精选别墅区</div></td>
+                    <td><div>xxx</div></td>
+                    <td></td>
+                </tr>
+            </table>
+</body>
+</html>

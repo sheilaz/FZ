@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菲众海外投资</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <link rel="stylesheet" href="css/navigationbar.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/zzsc-demo.css">
+    <style>
+        html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+        ul, ol { padding: 0;}
+
+        .banner { position: relative; overflow: auto; text-align: center;}
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+    </style>
+    
+    <style>
+        #b06 { width: 640px;}
+        #b06 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+        #b06 .dots li
+        {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+        #b06 .dots li.active
+        {
+            background: #fff;
+            opacity: 1;
+        }
+        #b06 .arrow { position: absolute; top: 200px;}
+        #b06 #al { left: 15px;}
+        #b06 #ar { right: 15px;}
+    </style>
+    
+    <style type="text/css">
+		.tel{color: white;font-size: 48px;}
+	</style>
+    
+    <style>
+		.wrap{width: 100%; display: inline-flex}
+	</style>
+
+    <script>
+        function imgReload()
+        {
+            var imgHeight = 0;
+            var wtmp = $("body").width();
+            $("#b06 ul li").each(function(){
+                $(this).css({width:wtmp + "px"});
+            });
+            $(".sliderimg").each(function(){
+                $(this).css({width:wtmp + "px"});
+                imgHeight = $(this).height();
+            });
+        }
+
+        $(window).resize(function(){imgReload();});
+
+        $(document).ready(function(e) {
+            imgReload();
+            var unslider06 = $('#b06').unslider({
+                    dots: true,
+                    fluid: true
+                }),
+                data06 = unslider06.data('unslider');
+
+            $('.unslider-arrow06').click(function() {
+                var fn = this.className.split(' ')[1];
+                data06[fn]();
+            });
+        });
+    </script>
+</head>
+<body>
+    <table style="width: 100%; background-color: #696969">
+        <ul>
+            <li><a href="">售房</a></li>
+            <li><a href="">租房</a></li>
+            <li><a href="">楼盘介绍</a></li>
+            <li><a href="">关于菲众</a></li>
+            <li><a href="contactUs.html">联系我们</a></li>
+            <li><a href="login.html">注册/登录</a></li>
+            <li><a href="addhouse.html">添加房源</a></li>
+        </ul>
+    </table>
+    <div align="center">
+    	<div style="position:relative; width:90%; height:auto;">
+		<img src="img/ad.jpg" width="100%"/>
+			<div style="position:absolute;width:100%px;height:100%;left:40%;top:40%;">
+				<p class="tel">服务热线</p>
+				<p class="tel">010-00000000</p>
+			</div>
+		</div>
+    </div>
+    <div class="wrap">
+			<div style="width: 50%;height:700px;background-color: white;margin-left: 5%">
+				<div style="font-size: 28px; color:black; margin-left:10%;margin-top: 10%">
+					菲众海外投资有限公司(北京分部)
+				</div>
+				<div style="font-size: 20px; color:black; margin-left:10%;margin-top: 3%">
+					<p>联系人：xxx</p>
+					<p>电话：xxxxxxxxxxx</p>
+					<p>邮箱：xxxxxxxx@gmail.com</p>
+					<p>地址：xxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+				</div>
+				<div style="font-size: 28px; color:black; margin-left:10%;margin-top: 10%">
+					菲众海外投资有限公司(马来西亚分部)
+				</div>
+				<div style="font-size: 20px; color:black; margin-left:10%;margin-top: 3%">
+					<p>联系人：xxx</p>
+					<p>电话：xxxxxxxxxxx</p>
+					<p>邮箱：xxxxxxxx@gmail.com</p>
+					<p>地址：xxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+				</div>
+			</div>
+			<div style="width: 40%;height:700px;background-color:darkgrey">
+				<div>
+					<img src="img/map.JPG " width="100%"/>
+				</div>
+				<div style="font-size: 36px; color: aliceblue;margin-left: 4%;margin-top: 2%">如何找到我们</div>
+				<div style="background-color:#52678C; width:55%; margin-left: 4%;height: 2px;"></div>
+				<div style="font-size: 20px; color: aliceblue;margin-left: 4%;margin-top: 2%">
+						<p>地址：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+						<p>QQ：xxxxxxxxx</p>
+						<p>邮箱：xxxxxxxxxxx@gmail.com</p>
+				</div>
+			</div>
+    </div>
+
+	<h2>&nbsp&nbsp&nbsp&nbsp合作单位展示</h2>
+
+    <div class="banner" id="b06">
+        <ul>
+            <li><img class="sliderimg" src="img/01.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/02.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/03.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/04.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+            <li><img class="sliderimg" src="img/05.JPG" alt="unslider.js 使用演示" width="100%" ></li>
+        </ul>
+        <a href="javascript:void(0);" class="unslider-arrow06 prev"><img class="arrow" id="al" src="img/arrowl.png" alt="prev" width="20" height="35"></a>
+        <a href="javascript:void(0);" class="unslider-arrow06 next"><img class="arrow" id="ar" src="img/arrowr.png" alt="next" width="20" height="37"></a>
+    </div>
+
+    <table bgcolor="#8A8A8A" width="100%" align="center">
+                <tr height="40">
+                    <td></td>
+                    <td>更多属性</td>
+                    <td>投资与签证</td>
+                    <td>热门城市</td>
+                    <td>热门楼盘</td>
+                    <td></td>
+                </tr>
+                <tr height="1">
+                    <td></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>菲律宾房产</div></td>
+                    <td><div>贷款办理</div></td>
+                    <td><div>Pasay区域</div></td>
+                    <td><div>Shore</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>豪华物业</div></td>
+                    <td><div>物业投资</div></td>
+                    <td><div>Makati区域</div></td>
+                    <td><div>Sea</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>预售公寓</div></td>
+                    <td><div>物业指南和价格</div></td>
+                    <td><div>Alabang区域</div></td>
+                    <td><div>xxx</div></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td></td>
+                    <td><div>购房投资移民</div></td>
+                    <td><div>精选别墅区</div></td>
+                    <td><div>xxx</div></td>
+                    <td></td>
+                </tr>
+            </table>
+</body>
+</html>

@@ -2,9 +2,455 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>菲众海外投资</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="css/flexslider/flexslider.css" rel="stylesheet" media="screen">
+    <link href="css/tabber.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+    <link href="css/responsive.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+        .tel{color: white;font-size: 36px;}
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Some scripts that are used in almost every page -->
+    <script src="js/tinynav.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/tabber.js"></script>
+    <!-- Load template main javascript file -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Load template main javascript file -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/unslider.min.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+        ul, ol { padding: 0;}
+        .banner { position: relative; overflow: auto; text-align: center;}
+        .banner li { list-style: none; }
+        .banner ul li { float: left; }
+    </style>
+    <style type="text/css">
+        .demo{
+            padding: 2em 0;
+        }
+        .box{
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .box:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,63,91,0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover:after{
+            opacity: 1;
+        }
+        .box img{
+            width: 100%;
+            height: auto;
+        }
+        .box .box-content{
+            width: 100%;
+            background: #255773;
+            padding: 10px 0;
+            color: #d5f7ff;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            z-index: 1;
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover .box-content{
+            bottom: 0;
+        }
+        .box .title{
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+        .box .post{
+            display: block;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .box .social{
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .box .social li{
+            display: inline-block;
+            margin-right: 7px;
+            position: relative;
+            transform: translateY(-100px);
+            transition: all 0.5s ease 0s;
+        }
+        .box:hover .social li:first-child{
+            transition-delay: 0.5s;
+        }
+        .box:hover .social li:last-child{
+            transition-delay: 0.8s;
+        }
+        .box .social li:before{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 50px;
+            background: #f1e7c3;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        .box:hover .social li{
+            transform: translateY(0);
+        }
+        .box .social li a{
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #f1e7c3;
+            font-size: 20px;
+            font-weight: 700;
+            color: #003f5b;
+            margin-top: 50px;
+            opacity: 1;
+            transition: all 0.3s ease 0s;
+        }
+        .box:hover .social li a{
+            opacity: 1;
+        }
+        .box .social li a:hover{
+            background: #ff9420;
+            color: #fff;
+        }
+        @media only screen and (max-width:990px){
+            .box{ margin-bottom: 30px; }
+        }
+    </style>
+    <style>
+        #b06 { width: 640px;}
+        #b06 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+        #b06 .dots li
+        {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+        #b06 .dots li.active
+        {
+            background: #fff;
+            opacity: 1;
+        }
+        #b06 .arrow { position: absolute; top: 100px;}
+        #b06 #al { left: 15px;}
+        #b06 #ar { right: 15px;}
+    </style>
 </head>
 <body>
-$END$
+<header>
+    <div class="container">
+        <div class="top-header">
+            <!-- Logo -->
+            <div class="realestate-logo pull-left"><a href="index.html" title=""> <img alt="" src=""></a></div>
+            <!-- End Logo -->
+            <!-- Menu -->
+            <div class="menu-navbar  pull-left">
+                <div class="navbar">
+                    <ul class="nav" id="navmenu">
+                        <li>
+                            <a class="brand" href="index.html" title="">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a  href="sell.html">售房</a>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="dropdown">
+                            <a   href="rent.html">租房</a>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="dropdown">
+                            <a  href="buildings.html">楼盘介绍</a>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="dropdown">
+                            <a  href="aboutus.html">关于菲众</a>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li><a href="contactUs.html" title="">联系我们</a></li>
+
+                        <li class="dropdown">
+                            <a href="addhouse.html">提交房源</a>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="dropdown">
+                            <a  href="login.html">注册/登录</a>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <section class="pic-cat">
+                <img width="1900" height="200" alt="" src="img/imgdemo/1900x200.gif">
+            </section>
+        </div>
+    </div>
+</header>
+<div class="main-content">
+    <div class="properties">
+        <div class="container">
+            <div class="grid_full_width gird_sidebar">
+                <div class="row">
+                    <!-- Main content -->
+                    <div >
+                        <!-- Property detail -->
+                        <div class="property_detail">
+                            <section class="slider-detail">
+                                <div id="pic-detail" class="flexslider">
+                                    <ul class="slides">
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                        <li>
+                                            <a class="detailbox" href="img/imgdemo/620x388.gif" title="1524A consectetur purus sit amet fermentum."><img alt=""  width="620" height="388" src="img/imgdemo/620x388.gif" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="pic-control" class="flexslider">
+                                    <ul class="slides">
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                        <li>
+                                            <img alt="" src="img/imgdemo/620x388.gif" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <div class="infotext-detail">
+                                <h3>1524A consectetur purus sit amet fermentum. </h3>
+                                <span class="price">$ 969000</span>
+                                <div class="row">
+                                    <div class="span260px">
+                                        <ul class="title-info">
+                                            <li>Bathrooms <span> 4</span> </li>
+                                            <li>Bathrooms <span> 5</span></li>
+                                            <li>Square Footage <span>3200 sqft</span></li>
+                                            <li>Type: <span>residential</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="span260px">
+                                        <ul class="title-info">
+                                            <li>Year <span> 2008</span> </li>
+                                            <li> Car Garage <span> 2</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="excerpt">
+                                    <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. </p>
+                                    <br/>
+                                    <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed non neque elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </p>
+                                    <br/>
+                                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Property -->
+                    </div>
+                    <!-- End Main content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+<footer>
+    <div class="footer-container">
+        <div class="container">
+            <table bgcolor="#8A8A8A" width="100%" align="center">
+                <tr height="40">
+                    <td></td>
+                    <td>更多属性</td>
+                    <td>投资与签证</td>
+                    <td>热门城市</td>
+                    <td>热门楼盘</td>
+                    <td></td>
+                </tr>
+                <tr height="1">
+                    <td></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td bgcolor="#CCCCCC"></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>菲律宾房产</div></td>
+                    <td><div>贷款办理</div></td>
+                    <td><div>Pasay区域</div></td>
+                    <td><div>Shore</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>豪华物业</div></td>
+                    <td><div>物业投资</div></td>
+                    <td><div>Makati区域</div></td>
+                    <td><div>Sea</div></td>
+                    <td></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td><div>预售公寓</div></td>
+                    <td><div>物业指南和价格</div></td>
+                    <td><div>Alabang区域</div></td>
+                    <td><div>xxx</div></td>
+                </tr>
+                <tr height="40">
+                    <td></td>
+                    <td></td>
+                    <td><div>购房投资移民</div></td>
+                    <td><div>精选别墅区</div></td>
+                    <td><div>xxx</div></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</footer>
+<!-- Always latest version of jQuery-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Some scripts that are used in almost every page -->
+<script src="js/tinynav/tinynav.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/tabber/tabber.js"></script>
+<!-- Load template main javascript file -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- ===================================================== -->
+<!-- ================ Property-detail page only scripts ============ -->
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/colorbox/jquery.colorbox.js"></script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    jQuery(function($){
+        $('#pic-control').flexslider({
+            animation: "slide",
+            controlNav: false,
+
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 55,
+            itemMargin: 10,
+            maxItems: 7,
+            asNavFor: '#pic-detail'
+        });
+
+        $('#pic-detail').flexslider({
+            controlNav: false,
+            directionNav: false,
+            animationLoop: false,
+            slideshow: false,
+            sync: "#pic-control",
+            start: function(slider){
+                $('body').removeClass('loading');
+            }
+        });
+
+        $(".detailbox").colorbox({rel:'detailbox'});
+    });
+    /* ]]> */
+</script>
 </html>

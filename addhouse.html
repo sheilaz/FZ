@@ -69,114 +69,121 @@
             <p2 class="tel">房源信息</p2>
         </div>
     </div>
-    <div style="background:#D3D3D3;margin-left: 30px;margin-right: 30px">
-        <div class="container" style="padding-top: 30px">
-            <p1 class="bud">所属楼盘：</p1>
-            <select id="my-menu01">
-                <option value="building01" selected>楼盘1</option>
-                <option value="building02">楼盘2</option>
-                <option value="building03">楼盘3</option>
-                <option value="building04">楼盘4</option>
-                <option value="building05">楼盘5</option>
-            </select>
-            <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-            <script src="js/jquery.fancyspinbox.js"></script>
-            <script>
-                $('#my-menu01').fancyspinbox();
-            </script>
-        </div>
 
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">户型：</p1>
-            <select id="my-menu02">
-                <option value="room01" selected>户型1</option>
-                <option value="room02">户型2</option>
-                <option value="room03">户型3</option>
-                <option value="room04">户型4</option>
-                <option value="room05">户型5</option>
-            </select>
-            <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-            <script src="js/jquery.fancyspinbox.js"></script>
-            <script>
-                $('#my-menu02').fancyspinbox();
-            </script>
-        </div>
+    <form action = 'http://localhost:8080/php/addhouse.php' method = 'post'>
 
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">阳台：</p1>
-            <select id="my-menu03">
-                <option value="balcony01" selected>全封闭</option>
-                <option value="balcony02">非封闭</option>
-                <option value="balcony03">复合型</option>
-                <option value="balcony04">无阳台</option>
-            </select>
-            <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-            <script src="js/jquery.fancyspinbox.js"></script>
-            <script>
-                $('#my-menu03').fancyspinbox();
-            </script>
-        </div>
-
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">朝向：</p1>
-            <select id="my-menu04">
-                <option value="direction01" selected>东西向</option>
-                <option value="direction02">南北向</option>
-            </select>
-            <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-            <script src="js/jquery.fancyspinbox.js"></script>
-            <script>
-                $('#my-menu04').fancyspinbox();
-            </script>
-        </div>
-
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">交易方式：</p1>
-            <select id="my-menu05">
-                <option value="direction01" selected>网上银行</option>
-                <option value="direction02">支付宝</option>
-            </select>
-            <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
-            <script src="js/jquery.fancyspinbox.js"></script>
-            <script>
-                $('#my-menu05').fancyspinbox();
-            </script>
-        </div>
-
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">价格：</p1>
-            <input type="text" name="price" size="12" style="border-radius: 3px; border-color: #16425B" placeholder="请输入价格"/>&nbsp;比索
-        </div>
-
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">面积：</p1>
-            <input type="text" name="area" size="12" style="border-radius: 3px; border-color: #16425B"  placeholder="请输入面积"/>&nbsp;平米
-        </div>
-
-        <h5></h5>
-        <div class="container">
-            <p1 class="bud">地点：</p1>
-            <input type="text" name="place01" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入楼号"/>&nbsp;楼，
-            <input type="text" name="place02" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入层号"/>&nbsp;层，
-            <input type="text" name="place03" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入房号"/>&nbsp;号
-        </div>
-        <div class="row"style="background:#D3D3D3; margin-left: 30px;margin-right: 30px; margin-top: 30px">
-            <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 250px" >
-                <button class="button button--antiman button--round-l button--text-medium"><i class="button__icon icon icon-plus"></i>		<span>Submit</span>
-                </button>
+        <div style="background:#D3D3D3;margin-left: 30px;margin-right: 30px">
+            <div class="container" style="padding-top: 30px">
+                <p1 class="bud">所属楼盘：</p1>
+                <select id="my-menu01" name="district">
+                    <option value="building01" selected>楼盘1</option>
+                    <option value="building02">楼盘2</option>
+                    <option value="building03">楼盘3</option>
+                    <option value="building04">楼盘4</option>
+                    <option value="building05">楼盘5</option>
+                </select>
+                <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+                <script src="js/jquery.fancyspinbox.js"></script>
+                <script>
+                    $('#my-menu01').fancyspinbox();
+                </script>
             </div>
-            <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 100px" >
-                <button class="button button--antiman button--round-l button--text-medium" onclick="window.location.href='index.html'"><i class="button__icon icon icon-plus"></i>
-                    <span>Back</span></button>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">户型：</p1>
+                <select id="my-menu02" name="style">
+                    <option value="room01" selected>户型1</option>
+                    <option value="room02">户型2</option>
+                    <option value="room03">户型3</option>
+                    <option value="room04">户型4</option>
+                    <option value="room05">户型5</option>
+                </select>
+                <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+                <script src="js/jquery.fancyspinbox.js"></script>
+                <script>
+                    $('#my-menu02').fancyspinbox();
+                </script>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">阳台：</p1>
+                <select id="my-menu03" name="balcony">
+                    <option value="balcony01" selected>全封闭</option>
+                    <option value="balcony02">非封闭</option>
+                    <option value="balcony03">复合型</option>
+                    <option value="balcony04">无阳台</option>
+                </select>
+                <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+                <script src="js/jquery.fancyspinbox.js"></script>
+                <script>
+                    $('#my-menu03').fancyspinbox();
+                </script>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">朝向：</p1>
+                <select id="my-menu04" name="direction">
+                    <option value="direction01" selected>东西向</option>
+                    <option value="direction02">南北向</option>
+                </select>
+                <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+                <script src="js/jquery.fancyspinbox.js"></script>
+                <script>
+                    $('#my-menu04').fancyspinbox();
+                </script>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">交易方式：</p1>
+                <select id="my-menu05" name="pay">
+                    <option value="online" selected>网上银行</option>
+                    <option value="alipay">支付宝</option>
+                </select>
+                <script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+                <script src="js/jquery.fancyspinbox.js"></script>
+                <script>
+                    $('#my-menu05').fancyspinbox();
+                </script>
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">价格：</p1>
+                <input type="text" name="price" size="12" style="border-radius: 3px; border-color: #16425B" placeholder="请输入价格"/>&nbsp;比索
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">面积：</p1>
+                <input type="text" name="area" size="12" style="border-radius: 3px; border-color: #16425B"  placeholder="请输入面积"/>&nbsp;平米
+            </div>
+
+            <h5></h5>
+            <div class="container">
+                <p1 class="bud">地点：</p1>
+                <input type="text" name="place01" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入楼号"/>&nbsp;楼，
+                <input type="text" name="place02" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入层号"/>&nbsp;层，
+                <input type="text" name="place03" size="10" style="border-radius: 3px; border-color: #16425B" placeholder="请输入房号"/>&nbsp;号
+            </div>
+
+
+            <div class="row"style="background:#D3D3D3; margin-left: 30px;margin-right: 30px; margin-top: 30px">
+                <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 250px" >
+                    <button type="submit" class="button button--antiman button--round-l button--text-medium"><i class="button__icon icon icon-plus"></i>
+                        <span>Submit</span>
+                    </button>
+                </div>
+                <div class="box bg-1" style="width:300px;display: inline-block;margin-left: 100px" >
+                    <button class="button button--antiman button--round-l button--text-medium" onclick="window.location.href='index.html'"><i class="button__icon icon icon-plus"></i>
+                        <span>Back</span></button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 </body>
 </html>

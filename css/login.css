@@ -7,7 +7,8 @@ html {
 }
 
 body {
-    background: #c1bdba;
+    background:url('../img/ad.jpg');
+    background-size: cover;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -22,10 +23,11 @@ a:hover {
 }
 
 .form {
-    background: #6B6B6B;
+    background: #ffffff;
     padding: 40px;
-    max-width: 600px;
-    margin: 40px auto;
+    margin-left:60% ;
+    margin-bottom:7% ;
+    max-width: 30%;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
@@ -45,7 +47,7 @@ a:hover {
     text-decoration: none;
     padding: 15px;
     background: rgba(160, 179, 176, 0.25);
-    color: #a0b3b0;
+    color: #000000;
     font-size: 20px;
     float: left;
     width: 50%;
@@ -56,11 +58,11 @@ a:hover {
 }
 .tab-group li a:hover {
     background: #179b77;
-    color: #ffffff;
+    color: #000000;
 }
 .tab-group .active a {
     background: #1ab188;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .tab-content > div:last-child {
@@ -69,7 +71,7 @@ a:hover {
 
 h1 {
     text-align: center;
-    color: #ffffff;
+    color:#000000;
     font-weight: 300;
     margin: 0 0 40px;
 }
@@ -79,7 +81,7 @@ label {
     -webkit-transform: translateY(6px);
     transform: translateY(6px);
     left: 13px;
-    color: rgba(255, 255, 255, 0.5);
+    color: #000000;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
     -webkit-backface-visibility: hidden;

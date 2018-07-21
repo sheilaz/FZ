@@ -15,7 +15,8 @@
       <style type="text/css">
 		.tel{color: white;font-size: 48px;}
 	</style>
-  </head>
+	
+</head>
 <body>
 <header>
 	<div class="container">
@@ -73,7 +74,7 @@
 			</div>
 		</div>
     </div>
-<div class="main-content">
+<div class="main-content" id="main-content">
 	<!-- Find Tabber Find-->
   <div class="find">
     <div class="container">
@@ -85,16 +86,8 @@
               <div class="span12">
                 <div class="row">
                   <div class="span4">
-                    <select>
-                      <option>选择区域</option>
-                      <option>Makati 马卡提 </option>
-                      <option>Ortigas 奥提加斯</option>
-                      <option>BGC 环球城</option>
-                      <option>Pasay 海边赌城</option>
-                      <option>Mandaluyong 曼达路永</option>
-                      <option>Boracay 长滩岛</option>
-                      <option>Metro Manila 马尼拉</option>
-                      <option>Alabang 阿拉邦</option>
+                    <select name="district">
+                      <option v-for="item in district">{{item}}</option>
                     </select>
                   </div>
                   <div class="span4">
@@ -105,18 +98,8 @@
                     </select>
                   </div>
                   <div class="span4">
-                  <select>
-                    <option>选择户型</option>
-                    <option>单身公寓studio</option>
-                    <option>一室一厅</option>
-                    <option>两室一厅</option>
-                    <option>三室一厅</option>
-                    <option>四室一厅</option>
-                    <option>多室</option>
-                    <option>复式</option>
-                    <option>别墅</option>
-                    <option>商品房</option>
-                    <option>办公室</option>
+                  <select name="style">
+                    <option v-for="item in style">{{item}}</option>
                   </select>
                 </div>
                 </div>
@@ -130,9 +113,9 @@
                     <option>期房</option>
                   </select>
               	</div>
-              	<div class="span6">
+              	<div class="span6" id="search">
                 <label>	
-                  <button class="search" type="button">Search</button>
+                  <button class="search" type="button" @click="search">Search</button>
                 </label>	
               </div>
             </div>
@@ -146,7 +129,7 @@
   <!-- End Tabber Find -->
   
   
-  <div class="properties">
+  <div class="properties" id="properties">
     <div class="container">
       <!-- Grid full width 3 column -->
       <div class="grid_full_width" id="3column">
@@ -157,96 +140,23 @@
         </div>
         <div class="row">
           <ul class="products" id="able-list">
-            <li style="display: block;" class="span4 first house offices Residential">
+            <li style="display: block;" class="span4 house offices apartment Residential" v-for="(item,index) in house">
               <div class="product-item">
                 <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
+                  <img alt="" width="300" height="180" v-bind:src="item.image">
+                  <span class="price"> {{item.price}}</span>
                 </div>
-                <h3><a href="property_detail.html" title=""> 1076 Nelson Walk </a></h3>
+                <h3><a :href="'property.html?building=' + item.building "> {{item.district}}</a></h3>
                 <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
+                  <li>Aera <span> {{item.area}}</span> </li>
+				  <li>Balcony <span>{{item.balcony}}</span></li>
+                  <li>Style <span> {{item.style}}</span></li>
+                  <li>Direction<span>{{item.direction}}</span></li>
+                  
                 </ul>
               </div>
             </li>
-            <li class="span4 house offices apartment Residential">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
-                </div>
-                <h3><a href="property_detail.html" title=""> 4101 Gulf Shore </a></h3>
-                <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
-                </ul>
-              </div>
-            </li>
-            <li class="span4 product last house offices apartment">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
-                </div>
-                <h3><a href="property_detail.html" title=""> 3900 Rum Row</a></h3>
-                <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
-                </ul>
-              </div>
-            </li>
-            <li class="span4 product first offices apartment Residential">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
-                </div>
-                <h3><a href="property_detail.html" title=""> 1085 Nelsons Walk </a></h3>
-                <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
-                </ul>
-              </div>
-            </li>
-            <li class="span4 house offices apartment Residential">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
-                </div>
-                <h3><a href="property_detail.html" title=""> 3675 Gordon Dr </a></h3>
-                <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
-                </ul>
-              </div>
-            </li>
-            <li class="span4 product last house offices Residential">
-              <div class="product-item">
-                <div class="imagewrapper">
-                  <img alt="" width="300" height="180" src="img/timg.jpg">
-                  <span class="price"> $358.000</span>
-                </div>
-                <h3><a href="property_detail.html" title=""> 204 temporibus vis  </a></h3>
-                <ul class="title-info">
-                  <li>Bathrooms <span> 1</span> </li>
-                  <li>Bathrooms <span> 1</span></li>
-                  <li>Square Footage <span>3200 sqft</span></li>
-                  <li>Type: <span>Residential</span></li>
-                </ul>
-              </div>
-            </li>
+            
           </ul>
         </div>
         <!-- Page-ination -->
@@ -364,5 +274,55 @@
 	  </div>
 	</footer>
 </body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+	//window.onload = function(){
+        
+	//}
+		var app = new Vue({
+            el: '#main-content',
+            data: {
+				district: ['选择区域','Makati 马卡提','Ortigas 奥提加斯','BGC 环球城','Pasay 海边赌城','Mandaluyong 曼达路永','Boracay 长滩岛','Metro Manila 马尼拉','Alabang 阿拉邦'],
+				style: ['选择户型','单身公寓','一室一厅','两室一厅','三室一厅','四室一厅','多室','复式','别墅','商品房','办公室'],
+				house: [],
+				message: ''
+			},
+			mounted(){
+				this.init();
+			},
+			methods: {
+				init(){
+					//alert("页面加载完成");
+					var _self=this;
+					$.ajax({
+						url: "/php/loadhouse.php",
+						type: "GET",
+						data: {
+						},
+						success: function(res){
+							_self.house = JSON.parse(res);
+						}
+					})
+				},
+				search(){
+					//alert();
+					var _self=this;
+					$.ajax({
+						url: "/php/loadhouse.php",
+						type: "GET",
+						data: {
+							district: $("select[name='district'] option:selected").val(),
+							style: $("select[name='style'] option:selected").val()
+						},
+						success: function(res){
+							//alert(res);
+							_self.house = JSON.parse(res);
+						}
+					})
+				}
+			},
+			
+        })
+    </script>
 </html>
 

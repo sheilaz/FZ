@@ -63,24 +63,20 @@
         </div>
     </div>
 </header>
-<div style="margin-left: 60px;margin-right: 60px">
+<div style="margin-left: 60px;margin-right: 60px" id="content">
     <div align="center">
         <div align="center" style="background:#D16A52; height: auto;margin-top: 30px;margin-bottom: 1px ;margin-left: 30px;margin-right: 30px">
             <p2 class="tel">房源信息</p2>
         </div>
     </div>
 
-    <form action = 'http://localhost:8080/php/addhouse.php' method = 'post'>
+    <form action = '../php/addhouse.php' method = 'post' enctype="multipart/form-data">
 
         <div style="background:#D3D3D3;margin-left: 30px;margin-right: 30px">
             <div class="container" style="padding-top: 30px">
                 <p1 class="bud">所属楼盘：</p1>
                 <select id="my-menu01" name="district" style="margin-left: 20px">
-                    <option value="building01" selected>楼盘1</option>
-                    <option value="building02">楼盘2</option>
-                    <option value="building03">楼盘3</option>
-                    <option value="building04">楼盘4</option>
-                    <option value="building05">楼盘5</option>
+                    <option v-for="item in district">{{item}}</option>
                 </select>
                 <script>
                     $('#my-menu01').fancyspinbox();
@@ -91,11 +87,7 @@
             <div class="container">
                 <p1 class="bud">户型：</p1>
                 <select id="my-menu02" name="style" style="margin-left: 50px">
-                    <option value="room01" selected>户型1</option>
-                    <option value="room02">户型2</option>
-                    <option value="room03">户型3</option>
-                    <option value="room04">户型4</option>
-                    <option value="room05">户型5</option>
+                    <option v-for="item in style">{{item}}</option>
                 </select>
                 <script>
                     $('#my-menu02').fancyspinbox();
@@ -163,19 +155,19 @@
             <h5></h5>
             <div class="container">
                 <p1 class="bud">房源略缩图：</p1>
-                <input type="file" style="margin-left: 10px" name="file" id="file"><br>
+                <input type="file" style="margin-left: 10px" name="overall[]"><br>
             </div>
 
             <h5></h5>
             <div class="container">
                 <p1 class="bud">户型图：</p1>
-                <input type="file" style="margin-left: 40px" name="file" id="file"><br>
+                <input type="file" style="margin-left: 40px" name="external[]" multiple><br>
             </div>
 
             <h5></h5>
             <div class="container">
                 <p1 class="bud">房屋内景：</p1>
-                <input type="file" style="margin-left: 25px" name="file" id="file"><br>
+                <input type="file" style="margin-left: 25px" name="internal[]" multiple><br>
             </div>
 
 
@@ -195,5 +187,15 @@
     </form>
 </div>
 </body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+	new Vue({
+		el: '#content',
+		data: {
+			district: ['选择区域','Makati 马卡提','Ortigas 奥提加斯','BGC 环球城','Pasay 海边赌城','Mandaluyong 曼达路永','Boracay 长滩岛','Metro Manila 马尼拉','Alabang 阿拉邦'],
+			style: ['选择户型','单身公寓','一室一厅','两室一厅','三室一厅','四室一厅','多室','复式','别墅','商品房','办公室'],
+		}
+	})
+</script>
 </html>
 

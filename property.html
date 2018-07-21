@@ -453,4 +453,27 @@
     });
     /* ]]> */
 </script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript" src="./js/getUrlParam.js"></script>
+    <script>
+		var app = new Vue({
+            el: '#content',
+            data: {
+				building: '',
+				house: [],
+			},
+			mounted(){
+				this.init();
+			},
+			methods: {
+				init(){
+					
+					this.building = UrlParam.paramValues("building")
+					alert(this.building);
+					
+				},
+			},
+			
+        })
+    </script>
 </html>
